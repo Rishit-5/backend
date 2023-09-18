@@ -4,7 +4,7 @@ import cors from "cors"
 const app = express()
 
 app.use(cors({
-    origin: "http://localhost:5500",
+    origin: "http://localhost:63342",
     credentials:true,            //access-control-allow-credentials:true
     optionSuccessStatus:200
 }))
@@ -17,7 +17,7 @@ app.get("/:name", async (req, res) => {
     let years = []
     let stats = []
     const name = req.params.name;
-    console.log(name)
+    // console.log(name)
     fetch("https://nba-stats-db.herokuapp.com/api/playerdata/name/" + name, requestOptions)
         .then(response => response.json())
         .then(result => {
