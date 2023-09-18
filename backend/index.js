@@ -4,7 +4,7 @@ import cors from "cors"
 const app = express()
 
 app.use(cors({
-    origin: "http://localhost:63342",
+    origin: "http://localhost:5500",
     credentials:true,            //access-control-allow-credentials:true
     optionSuccessStatus:200
 }))
@@ -42,5 +42,5 @@ app.get("/", async (req, res) => {
 })
 
 
-const port = process.env.PORT || 10000
+const port = process.env.PORT || 3000
 app.listen(port, () => console.log(`server listening on port ${port} 🚀`))
