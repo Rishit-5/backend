@@ -4,12 +4,71 @@
         <script src="https://cdn.plot.ly/plotly-2.25.2.min.js" charset="utf-8"></script>
         <script type="module" src="graph.mjs"></script>
     </head>
-    <h1>Steph Curry 3 Pointers Made Per Game Since 2009-10 Season </h1>
+    <div class = "stuff">
+        <h1 class = "header">NBA Player Stats Per Game Since 2009-10 Season (Or Rookie Season)</h1>
+        <br />
+        <input id = "player" placeholder = "Player Full Name" class = "configure"></input>
+        <br />
+        <select name="stat" id="stat" class = "stat">
+            <option value="Points">Points</option>
+            <option value="Assists">Assists</option>
+            <option value="Rebounds">Rebounds</option>
+            <option value="3s">Three Pointers</option>
+            <option value="Minutes">Minutes</option>
+        </select>
+        <br />
+        <button id = "Submit" class = "configure2">Submit</button>
+        <br />
+    </div>
         <div id="graph"></div>
     </body>
+    <h4 class="header2">*If results do not pop up for a player, it could be because their name uses a special character (e.g.: Nikola Jokić)</h4>
 </html>
 <style>
     body {
-        background-color: slategray;
+        background-color: #48494B;
+    }
+    .header2 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        color: white;
+    }
+    .stat {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 2em;
+        width: 20%;
+        text-align: center;
+    }
+    .header {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        color: white;
+    }
+    .configure {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30%;
+        height: 2em;
+        text-align: center;
+    }
+    .configure2 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 10%;
+        height: 2em;
+        color: white;
+        background-color: dodgerblue;
+        border-radius: 25px;
+    }
+    .stuff {
+        width: 100%
     }
 </style>
