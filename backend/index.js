@@ -9,15 +9,16 @@ app.use(cors({
     optionSuccessStatus:200
 }))
 
-app.get("/", async (req, res) => {
+app.get("/:name", async (req, res) => {
     var requestOptions = {
         method: 'GET',
         redirect: 'follow'
     };
     let years = []
     let stats = []
-
-    fetch("https://nba-stats-db.herokuapp.com/api/playerdata/name/Lebron James", requestOptions)
+    const name = req.params.name;
+    console.log(name)
+    fetch("https://nba-stats-db.herokuapp.com/api/playerdata/name/" + name, requestOptions)
         .then(response => response.json())
         .then(result => {
             // console.log(result.results)
@@ -27,10 +28,6 @@ app.get("/", async (req, res) => {
                 years.push(result.results[i].season)
 
             }
-                // console.log(stats)
-            // for (let i = 0; i < stats.length; i++) {
-            //     years.push(i+1)
-            // }
             }
         ).then(result =>
         res.send({
