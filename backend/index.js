@@ -4,7 +4,7 @@ import cors from "cors"
 const app = express()
 
 app.use(cors({
-    origin: "http://localhost:5500",
+    origin: "https://localhost:5500",
     credentials:true,            //access-control-allow-credentials:true
     optionSuccessStatus:200
 }))
@@ -27,7 +27,7 @@ app.get("/:name/:stat", async (req, res) => {
             let ans;
 
             // console.log(result.results)
-            console.log(result.results.length)
+            // console.log(result.results.length)
             for (let i = 0; i < result.results.length; i++) {
                 if (stat == "Points"){
                     ans  = result.results[i].PTS/result.results[i].games;
@@ -56,4 +56,4 @@ app.get("/:name/:stat", async (req, res) => {
 
 
 const port = process.env.PORT || 3000
-app.listen(port, () => console.log(`server listening on port ${port} 🚀`))
+app.listen(port,'0.0.0.0', () => console.log(`server listening on port ${port} 🚀`))
