@@ -7,7 +7,7 @@ document.getElementById("Submit").onclick = function(){
 
     fetch(
         // https://oa-2023-24-backend.onrender.com
-        "https://cobalt-blue-duckling-vest.cyclic.cloud/" + player + "/" + stat  //use "http://localhost:3000" if running sample express backend locally, or replace with your own backend endpoint url
+        "https://wide-eyed-jade-snaps.cyclic.cloud/" + player + "/" + stat  //use "http://localhost:3000" if running sample express backend locally, or replace with your own backend endpoint url
          // "http://localhost:3000/" + player + "/" + stat
     ).then(async res => {
         Plotly.newPlot( graphDiv, [ await res.json() ]);
