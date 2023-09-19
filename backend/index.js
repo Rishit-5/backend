@@ -4,7 +4,7 @@ import cors from "cors"
 const app = express()
 
 app.use(cors({
-    origin: "http://localhost:5500",
+    origin: "https://localhost:5500",
     credentials:true,            //access-control-allow-credentials:true
     optionSuccessStatus:200
 }))

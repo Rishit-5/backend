@@ -1,3 +1,21 @@
+Find the stats of any NBA player over the last 14 years! Enter their full name in the text box (e.g. Stephen Curry), then choose a statistic, and click submit.
+
+There were issues with hosting the backend as the http vs https protocols did not work on UWNet, though it worked on other wifi sources, requiring post-submission edits to use a new hosting service. However, none of the actual features of the web app were changed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # DSSD 2023-2024 Admissions Assessment
 
 This repository has starter code that you will build on to show your skills as a developer. [Fork this repository](https://github.com/DSSD-Madison/oa-2023-24/fork) to get started on your own copy.
